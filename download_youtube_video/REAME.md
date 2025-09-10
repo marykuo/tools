@@ -2,16 +2,10 @@
 
 此 Python 腳本利用 `yt-dlp` 工具，簡單地從 YouTube 下載整部影片，可指定下載畫質及輸出檔名格式。
 
----
-
 ## Features
 
-- 輸入 YouTube 影片網址
-- 指定下載畫質（如 `best`、`worst`、`720p`、`480p`）
-- 自訂輸出檔名格式（支援 `%(title)s`、`%(id)s`、`%(ext)s` 等 yt-dlp 格式化參數）
-- 透過系統命令執行 `yt-dlp` 下載影片
-
----
+- 下載 YouTube 影片並指定影片格式
+- 剪輯影片片段 (TBD)
 
 ## Requirements
 
@@ -22,8 +16,6 @@
 pip install -U yt-dlp
 ```
 
----
-
 ## Usage
 
 1. 執行腳本：
@@ -31,11 +23,9 @@ pip install -U yt-dlp
    python download_youtube_video.py
    ```
 2. 依序輸入：
-   -  YouTube 影片網址
+   -  YouTube 影片網址（https://www.youtube.com/watch?v=xxxxxxx）
    -  畫質（可留空，預設為 `best`）
-3. 影片將依指定畫質下載，檔案會儲存在腳本執行目錄，預設名稱為影片標題。
-
----
+3. 影片會儲存在執行腳本的目錄，預設名稱為影片標題。
 
 ## Parameters
 
@@ -43,27 +33,16 @@ pip install -U yt-dlp
 | --------- | --------------------------- | -------------------- |
 | `url`     | YouTube 影片完整網址              | 必填                   |
 | `quality` | 下載畫質格式（如 `best`、`worst`）    | `best`               |
-| `output`  | 輸出檔名格式（`%(title)s.%(ext)s`） | `% (title)s.%(ext)s` |
-
----
 
 ## Example
 
 下載最高畫質：
 
-```
-請輸入 YouTube 影片網址：https://www.youtube.com/watch?v=xxxxxxx
-請輸入畫質（預設 best）： 
-```
+![](./image-best-quality.png)
 
 下載指定畫質：
 
-```
-請輸入 YouTube 影片網址：https://www.youtube.com/watch?v=xxxxxxx
-請輸入畫質（預設 best）：480p
-```
-
----
+![](./image-specific-quality.png)
 
 ## 注意事項
 
